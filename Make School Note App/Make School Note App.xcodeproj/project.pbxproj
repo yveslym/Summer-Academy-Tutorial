@@ -12,6 +12,7 @@
 		2046E76E20E547DC00BB5F2D /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046E76D20E547DC00BB5F2D /* ListNotesTableViewCell.swift */; };
 		2046E77120E57EAF00BB5F2D /* MakeSchoolNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2046E76F20E57EAF00BB5F2D /* MakeSchoolNotes.xcdatamodeld */; };
 		2046E77320E5808C00BB5F2D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046E77220E5808C00BB5F2D /* CoreDataHelper.swift */; };
+		2046E77520E59A3F00BB5F2D /* String+Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046E77420E59A3F00BB5F2D /* String+Date+Extension.swift */; };
 		205ACFD720E43148009042D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205ACFD620E43148009042D1 /* AppDelegate.swift */; };
 		205ACFD920E43148009042D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205ACFD820E43148009042D1 /* ViewController.swift */; };
 		205ACFDC20E43148009042D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205ACFDA20E43148009042D1 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		2046E76D20E547DC00BB5F2D /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
 		2046E77020E57EAF00BB5F2D /* MakeSchoolNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakeSchoolNotes.xcdatamodel; sourceTree = "<group>"; };
 		2046E77220E5808C00BB5F2D /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		2046E77420E59A3F00BB5F2D /* String+Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date+Extension.swift"; sourceTree = "<group>"; };
 		205ACFD320E43148009042D1 /* Make School Note App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make School Note App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		205ACFD620E43148009042D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		205ACFD820E43148009042D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		2046E76420E541EA00BB5F2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2046E77420E59A3F00BB5F2D /* String+Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				2046E77320E5808C00BB5F2D /* CoreDataHelper.swift in Sources */,
 				205ACFD920E43148009042D1 /* ViewController.swift in Sources */,
 				205ACFD720E43148009042D1 /* AppDelegate.swift in Sources */,
+				2046E77520E59A3F00BB5F2D /* String+Date+Extension.swift in Sources */,
 				2046E77120E57EAF00BB5F2D /* MakeSchoolNotes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

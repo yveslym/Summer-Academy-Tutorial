@@ -40,4 +40,22 @@ struct CoreDataHelper {
         
         saveNote()
     }
+    // Method to retrieve Note
+    static func retrieveNotes() -> [Note] {
+        do {
+            let fetchRequest = NSFetchRequest<Note>(entityName: "Note")
+            let results = try context.fetch(fetchRequest)
+            
+            let sortedResult = results.sorted(by: {return $0.modificationTime! > $1.modificationTime!})
+            
+            return sortedResult
+        } catch let error {
+            print("Could not fetch \(error.localizedDescription)")
+            
+            return []
+        }
+    }
 }
+
+
+

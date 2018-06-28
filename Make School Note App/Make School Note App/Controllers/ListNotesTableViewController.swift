@@ -10,9 +10,17 @@ import UIKit
 
 class ListNotesTableViewController: UITableViewController {
 
+    
+    // - MARK: PROPERTIES
+    
+    // properties that stores all notes
+    var notes = [Note]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,25 +35,41 @@ class ListNotesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return notes.count
+    }
+    override func viewWillAppear(_ animated: Bool) {
+         self.notes = CoreDataHelper.retrieveNotes()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listofnote", for: indexPath) as! ListNotesTableViewCell
+        
         // Configure the cell...
+        let note = notes[indexPath.row]
+        cell.NoteTitleLabel.text = note.title
+        cell.ModificationDataLabel.text = note.modificationTime?.toString()
+        
 
         return cell
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let displayViewController = segue.destination as! DisplayNoteViewController
+        let note = sender as! Note
+        displayViewController.note = note
+    }
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let note = notes[indexPath.row]
+        performSegue(withIdentifier: "note", sender: note)
+    }
 
     /*
     // Override to support conditional editing of the table view.

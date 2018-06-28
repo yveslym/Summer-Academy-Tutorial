@@ -10,6 +10,23 @@ import UIKit
 
 class DisplayNoteViewController: UIViewController {
 
+    // - MARK: IBOUTLET
+    
+    @IBOutlet weak var noteTitleLabel: UILabel!
+    @IBOutlet weak var noteContentTextView: UITextView!
+    
+    
+    // -MARK: PROPERTIES
+    
+    var note = Note(){
+        didSet{
+            DispatchQueue.main.async {
+                self.noteTitleLabel.text = self.note.title
+                self.noteContentTextView.text = self.note.content
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
